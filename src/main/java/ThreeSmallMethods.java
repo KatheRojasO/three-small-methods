@@ -1,10 +1,14 @@
 public class ThreeSmallMethods {
 
     public boolean isYoung(int age) {
-        return false;
+        if (age <= 30) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public boolean hasLegalGenderManInSweden(String personalNumber){
+    public boolean hasLegalGenderManInSweden(String personalNumber) {
         return false;
     }
 
