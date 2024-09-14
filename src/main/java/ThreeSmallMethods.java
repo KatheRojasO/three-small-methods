@@ -9,6 +9,11 @@ public class ThreeSmallMethods {
     }
 
     public boolean hasLegalGenderManInSweden(String personalNumber) {
+        int personalNumberLength = 10;
+
+        if (personalNumber.length() < personalNumberLength || personalNumber.length() > personalNumberLength) {
+            return false;
+        }
         return false;
     }
 
