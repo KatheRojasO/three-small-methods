@@ -26,7 +26,7 @@ class ThreeSmallMethodsTest {
     }
 
     @Test
-    //This should be done with an exception but since the problem said we shouldn't throw exceptions, I assigned false to negative numbers
+        //This should be done with an exception but since the problem said we shouldn't throw exceptions, I assigned false to negative numbers
     void isYoungShouldNotEvaluateNegativeNumbers() {
         boolean isYoung = methods.isYoung(-1);
         assertFalse(isYoung);
@@ -37,12 +37,10 @@ class ThreeSmallMethodsTest {
             "7001011147",
             "7001011680",
             "7311112245"
-
     })
     void hasLegalGenderManInSwedenShouldEvaluateToFemale(String personnummer) {
         boolean legallyManInSweden = methods.hasLegalGenderManInSweden(personnummer);
         assertFalse(legallyManInSweden);
-
     }
 
     @ParameterizedTest
@@ -85,5 +83,11 @@ class ThreeSmallMethodsTest {
     void firstTwoDigitIntegerShouldhandleNegativeNumbers() {
         int[] data = {100, 1, -17, 22};
         assertEquals(-17, methods.firstTwoDigitInteger(data));
+    }
+
+    @Test
+    void firstTwoDigitIntegerShouldBeMinus1WhenTheArrayIsEmpty() {
+        int[] data = {};
+        assertEquals(-1, methods.firstTwoDigitInteger(data));
     }
 }
