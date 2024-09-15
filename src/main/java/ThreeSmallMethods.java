@@ -30,12 +30,8 @@ public class ThreeSmallMethods {
     }
 
     public int firstTwoDigitInteger(int[] numbers) {
-
         for (int i = 0; i < numbers.length; i++) {
-            String numberToString = String.valueOf(numbers[i]);
-            int stringLength = numberToString.length();
-
-            if(stringLength==2){
+            if (numbers[i] > -100 && numbers[i] < -9 || numbers[i] > 9 && numbers[i] < 100) {
                 return numbers[i];
             }
         }
