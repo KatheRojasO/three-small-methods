@@ -5,7 +5,7 @@ public class ThreeSmallMethods {
     public boolean isYoung(int age) {
         int maxAge = 30;
 
-        if (age <= maxAge) {
+        if (age > 0 && age <= maxAge) {
             return true;
         } else {
             return false;
