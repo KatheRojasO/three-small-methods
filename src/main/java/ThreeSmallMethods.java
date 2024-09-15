@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ThreeSmallMethods {
 
     public boolean isYoung(int age) {
@@ -28,6 +30,15 @@ public class ThreeSmallMethods {
     }
 
     public int firstTwoDigitInteger(int[] numbers) {
+
+        for (int i = 0; i < numbers.length; i++) {
+            String numberToString = String.valueOf(numbers[i]);
+            int stringLength = numberToString.length();
+
+            if(stringLength==2){
+                return numbers[i];
+            }
+        }
         return -1;
     }
 }
