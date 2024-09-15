@@ -12,13 +12,13 @@ public class ThreeSmallMethods {
     }
 
     public boolean hasLegalGenderManInSweden(String personalNumber) {
-        int personalNumberLength = 10;
+        int personalNumberMaxLength = 10;
+        int personalNumberLength = personalNumber.length();
         int index = personalNumber.length() - 2;
         char secondToLastNumberChar = personalNumber.charAt(index);
         int secondToLastNumber = Integer.parseInt(String.valueOf(secondToLastNumberChar));
 
-        //Refactor
-        if (personalNumber.length() < personalNumberLength || personalNumber.length() > personalNumberLength) {
+        if (personalNumberLength < personalNumberMaxLength || personalNumberLength > personalNumberMaxLength) {
             return false;
         }
 
