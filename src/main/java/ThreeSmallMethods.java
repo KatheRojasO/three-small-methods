@@ -3,8 +3,9 @@ import java.util.Arrays;
 public class ThreeSmallMethods {
 
     public boolean isYoung(int age) {
-        //refactor
-        if (age <= 30) {
+        int maxAge = 30;
+
+        if (age <= maxAge) {
             return true;
         } else {
             return false;
