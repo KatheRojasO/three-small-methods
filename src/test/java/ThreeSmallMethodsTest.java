@@ -25,6 +25,13 @@ class ThreeSmallMethodsTest {
         assertTrue(isYoung);
     }
 
+    @Test
+    //This should be done with an exception but since the problem said we shouldn't throw exceptions, I assigned false to negative numbers
+    void isYoungShouldNotEvaluateNegativeNumbers() {
+        boolean isYoung = methods.isYoung(-1);
+        assertFalse(isYoung);
+    }
+
     @ParameterizedTest
     @ValueSource(strings = {
             "7001011147",
